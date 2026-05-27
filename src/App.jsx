@@ -1,20 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import CourseList from './components/courseCards'
 
-function App({ courses}) {
-  const [count, setCount] = useState(0)
-
+function App({ courses }) {
   return (
     <>
-      <div>
+      <div className="content-header">
         <h1>Courses</h1>
-        <div>
-          <CourseList courses={courses}/>
-        </div>
+        <p className="content-subtitle">
+          Selecciona una carpeta con videos para crear un curso local.
+        </p>
       </div>
+      <CourseList courses={courses} />
     </>
   )
 }
